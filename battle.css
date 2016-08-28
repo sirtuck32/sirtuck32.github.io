@@ -1,0 +1,187 @@
+#battle {
+  font-family: 'Chewy', cursive;
+  background-color: white;
+  position: fixed;
+  height: calc(100% - 177px);
+  width: calc(100% - 240px - 21% - 24px);
+  border: 1px solid black;
+  left: calc(2px + 21% + 13px);
+  top: 142px;
+  overflow-y: scroll;
+}
+
+#battleButtons {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: 30px;
+  left: 4px;
+  top: 4px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.battleButton {
+  font-family: 'Chewy', cursive;
+  background-color: white;
+  position: relative;
+  border: 1px solid black;
+  width: auto;
+  height: auto;
+  padding: 1px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#armyStats {
+  background-color: opaque;
+  position: absolute;
+  width: calc(50% - 10px);
+  height: 100px;
+  text-align: right;
+  overflow: hidden;
+  overflow-y: scroll;
+  top: 40px;
+  left: 4px;
+}
+
+.battleItem {
+  font-family: 'Chewy', cursive;
+  background-color: white;
+  text-align: left;
+}
+
+#enemyStats {
+  background-color: opaque;
+  position: absolute;
+  width: calc(50% - 10px);
+  height: 100px;
+  text-align: right;
+  overflow: hidden;
+  overflow-y: scroll;
+  top: 40px;
+  left: calc(50% + 4px);
+}
+
+.enemyBattleItem {
+  font-family: 'Chewy', cursive;
+  background-color: white;
+  position: relative;
+  text-align: left;
+  color: green;
+}
+
+
+#playerHealth {
+  font-family: 'Chewy', cursive;
+  background-color: red;
+  position: absolute;
+  width: calc(50% - 9px);
+  height: 16px;
+  text-align: right;
+  overflow: hidden;
+  top: 166px;
+  left: 4px;
+  
+  transition: width 1s;
+  -moz-transition: width 1s; /* Firefox 4 */
+  -webkit-transition: width 1s; /* Safari and Chrome */
+  -o-transition: width 1s; /* Opera */
+  -ms-transition: width 1s; /* IE9 (maybe) */
+
+}
+
+#playerOverlay {
+  font-family: 'Chewy', cursive;
+  background-color: opaque;
+  border: 1px solid black;
+  position: absolute;
+  width: calc(50% - 10px);
+  height: 15px;
+  text-align: right;
+  overflow: hidden;
+  top: 166px;
+  left: 4px;
+}
+
+
+
+#enemyHealth {
+  font-family: 'Chewy', cursive;
+  background-color: green;
+  position: absolute;
+  width: calc(50% - 9px);
+  height: 16px;
+  left: calc(50% + 4px);
+  top: 166px;
+  
+  transition: width 1s;
+  -moz-transition: width 1s; /* Firefox 4 */
+  -webkit-transition: width 1s; /* Safari and Chrome */
+  -o-transition: width 1s; /* Opera */
+  -ms-transition: width 1s; /* IE9 (maybe) */
+}
+
+#enemyOverlay {
+  font-family: 'Chewy', cursive;
+  background-color: opaque;
+  border: 1px solid black;
+  position: absolute;
+  width: calc(50% - 10px);
+  height: 15px;
+  left: calc(50% + 4px);
+  top: 166px;
+}
+
+#recharge {
+  font-family: 'Chewy', cursive;
+  background-color: blue;
+  position: absolute;
+  width: 0px;
+  height: 16px;
+  text-align: right;
+  overflow: hidden;
+  visibility: visible;
+  top: 146px;
+  left: 4px;
+  
+  transition: width 1s;
+  -moz-transition: width 1s; /* Firefox 4 */
+  -webkit-transition: width 1s; /* Safari and Chrome */
+  -o-transition: width 1s; /* Opera */
+  -ms-transition: width 1s; /* IE9 (maybe) */
+}
+
+#rechargeOverlay {
+  font-family: 'Chewy', cursive;
+  background-color: opaque;
+  border: 1px solid black;
+  position: absolute;
+  width: calc(100% - 10px);
+  height: 15px;
+  text-align: right;
+  overflow: hidden;
+  top: 146px;
+  left: 4px;
+  visibility: visible;
+}
+
+#rewards {
+  font-family: 'Chewy', cursive;
+  background-color: white;
+  position: absolute;
+  width: calc(100% - 10px);
+  height: auto;
+  left: 4px;
+  top: 186px;
+  overflow-y: scroll;
+  
+  transition: width 1s;
+  -moz-transition: width 1s; /* Firefox 4 */
+  -webkit-transition: width 1s; /* Safari and Chrome */
+  -o-transition: width 1s; /* Opera */
+  -ms-transition: width 1s; /* IE9 (maybe) */
+}
+

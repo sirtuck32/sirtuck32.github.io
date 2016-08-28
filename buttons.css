@@ -1,0 +1,127 @@
+.favorButton {
+  font-family: 'Chewy', cursive;
+  padding: 4px;
+
+  background-color: white;
+  border: 1px solid black;
+  width: 200px;
+  height: 20px;
+  text-align: center;
+  margin: 5px;
+  margin-left: 15px;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.favorButton:hover {
+  height: auto;
+}
+
+.purchaseButton {
+  font-family: 'Chewy', cursive;
+  padding: 4px;
+
+  background-color: white;
+  border: 1px solid black;
+  width: 200px;
+  height: 38px;
+  text-align: center;
+  margin: 5px;
+  margin-left: 15px;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  
+  transition: height 1s;
+  -moz-transition: height 1s; /* Firefox 4 */
+  -webkit-transition: height 1s; /* Safari and Chrome */
+  -o-transition: height 1s; /* Opera */
+  -ms-transition: height 1s; /* IE9 (maybe) */
+}
+
+.purchaseButton:hover {
+  height: auto;
+}
+
+	/* THESE NEXT 3 ARE VISUALS ON THE PURCHASE BUTTON*/
+	.objName {
+	  float:left;
+	}
+
+	.price {
+	  float:left;
+	  font-size: 80%;
+	}
+	.count  {
+	  float:right;
+	  font-size: 150%;
+	}
+	.description {
+		font-family: 'Chewy', cursive;
+		font-size: 80%;
+	}
+
+.nextPurchase {
+  font-family: 'Chewy', cursive;
+  color: red;
+  padding: 4px;
+
+  background-color: white;
+  border: 1px solid red;
+  width: 200px;
+  height: auto;
+  text-align: center;
+  margin: 5px;
+  margin-left: 15px;
+  display: inline-block;
+}
+
+
+.tab {
+  font-family: 'Chewy', cursive;
+  padding: 4px;
+
+  background-color: white;
+  border: 1px solid black;
+  width: 60px;
+  height: 21px;
+  text-align: center;
+  margin: 5px;
+  margin-right: 1px;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.progress {
+  font-family: 'Chewy', cursive;
+  position: absolute;
+  left: calc(80% + 65px);
+  top: 6px;
+}
+
+
+
+
+.generateButton {
+  font-family: 'Chewy', cursive;
+  padding: 4px;
+
+  background-color: white;
+  border: 1px solid black;
+  width: 200px;
+  height: 38px;
+  text-align: center;
+  margin: 5px;
+  margin-left: 15px;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  
+  transition: height 1s;
+  -moz-transition: height 1s; /* Firefox 4 */
+  -webkit-transition: height 1s; /* Safari and Chrome */
+  -o-transition: height 1s; /* Opera */
+  -ms-transition: height 1s; /* IE9 (maybe) */
+}

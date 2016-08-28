@@ -1,0 +1,184 @@
+body {
+	background-color: white;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Chewy', cursive;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.leftMenu {
+  font-family: 'Chewy', cursive;
+  padding: 4px;
+  background-color: white;
+  position: fixed;
+  height: calc(100% - 128px);
+  width: 21%;
+  border: 1px solid black;
+  left: 2px;
+  top: 85px;
+  display: none;
+  overflow-y: scroll;
+}
+
+
+
+#title {
+  font-family: 'Chewy', cursive;
+  position: fixed;
+  width: 100%;
+  font-size: 200%;
+  text-align:center;
+  left: 0px;
+  top: 0px;
+  overflow-y: scroll;
+}
+
+#banner {
+	position: fixed;
+	left: 2px;
+	top: 0px;
+	display: none;
+}
+
+.rightMenu {
+  font-family: 'Chewy', cursive;
+  background-color: white;
+  position: fixed;
+  height: calc(100% - 120px);
+  width: 240px;
+  border: 1px solid black;
+  left: calc(100% - 240px - 4px);
+  top: 85px;
+  overflow-y: scroll;
+}
+
+#tabs {
+  background-color: white;
+  position: fixed;
+  height: 40px;
+  width: 240px;
+  border: 1px solid black;
+  left: calc(100% - 240px - 4px);
+  top: 40px;
+  overflow-y: scroll;
+}
+
+#infoTabs {
+  background-color: white;
+  position: fixed;
+  height: 40px;
+  width: calc(21% + 8px);
+  border: 1px solid black;
+  left: 2px;
+  top: 40px;
+  overflow-y: scroll;
+}
+
+.infoTab {
+  font-family: 'Chewy', cursive;
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
+  width: 60px;
+  height: 21px;
+  margin-top: 3px;
+  margin-left: 2px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#footer {
+  background-color: white;
+  position: fixed;
+  height: 30px;
+  width: 100%;
+  border: 1px solid black;
+  left: -1px;
+  top: calc(100% - 30px);
+}
+
+.footerDiv {
+  background-color: white;
+  border: 1px solid black;
+  width: 50px;
+  height: 18px;
+  text-align: center;
+  margin: 5px;
+  margin-right: 0px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#autoSaveIndicator {
+  background-color: white;
+  width: 150px;
+  height: 18px;
+  text-align: center;
+  margin: 5px;
+  margin-right: 0px;
+  display: none;
+  cursor: pointer;
+}
+
+#deleteSaveButton {
+  width: 100px;
+  float: right;
+  margin-right: 5px;
+}
+
+.godblock {
+  background-color: gray;
+  position: fixed;
+  height: calc(10%);
+  width: 25%;
+  border: 1px solid black;
+  left: calc(1%);
+  top: calc(80%);
+  overflow-y: scroll;
+}
+
+.purchasedUpgrade {
+  font-family: 'Chewy', cursive;
+  color: grey;
+  padding: 4px;
+
+  background-color: white;
+  border: 1px solid grey;
+  width: 200px;
+  height: auto;
+  text-align: center;
+  margin: 5px;
+  margin-left: 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nextUpgrade {
+  font-family: 'Chewy', cursive;
+  color: red;
+  padding: 4px;
+
+  background-color: white;
+  border: 1px solid red;
+  width: 200px;
+  height: auto;
+  text-align: center;
+  margin: 5px;
+  margin-left: 15px;
+  display: inline-block;
+}
+
+#ascendButton {
+	border: 1px solid black;
+	width: calc(100% - 8px);
+	height: 20px;
+	text-align: center;
+	cursor: pointer;
+}

@@ -1,5 +1,194 @@
+<!DOCTYPE html>
 <html>
-<body>
-Testing
-</body>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+		<title id="title">Goats Galore v0.27.4</title>
+		<link rel="stylesheet" type="text/css" href="interface.css" />
+		<link rel="stylesheet" type="text/css" href="buttons.css" />
+		<link rel="stylesheet" type="text/css" href="quest.css" />
+		<link rel="stylesheet" type="text/css" href="battle.css" />
+		<link rel="stylesheet" type="text/css" href="items.css" />
+		<link rel="stylesheet" type="text/css" href="skills.css" />
+		
+		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="basic.js"></script>
+		<script type="text/javascript" src="gods.js"></script>
+		<script type="text/javascript" src="science.js"></script>
+		<script type="text/javascript" src="battle.js"></script>
+		<script type="text/javascript" src="ascend.js"></script>
+		
+		<script type="text/javascript" src="items.js"></script>
+		<script type="text/javascript" src="skills.js"></script>
+		<script type="text/javascript" src="upgrades.js"></script>
+		<script type="text/javascript" src="purchases.js"></script>
+
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','http://google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-63729602-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</head>
+	
+	<body onload="startup()">
+		<div id="banner">
+			<img src="Gopollobanner.png">	
+		</div>
+
+		<div id="title" style="text-align:center">Goats Galore v0.27.4</div>
+
+		<div id="infoTabs">
+			<div class="infoTab" onclick="showStats()">Stats</div>
+			<div class="infoTab" onclick="showOptions()">Options</div>
+			<div class="infoTab" onclick="showItems()">Items</div>
+			<div class="infoTab" onclick="showAscend()">Ascend</div>
+		</div>
+		
+		<div id="stats" class="leftMenu">
+			<div id="currencyText">Money: <span id="currency">0</span></div>
+			<div id="currencyVal">Per Second: <span id="currencyInc">0</span></div>
+			<br/>
+			<div id="electricityText">Electricity: <span id="electricity">0</span></div>
+			<div id="electricityVal">Per Second: <span id="electricityInc">0</span></div>
+			<br/>
+			Available Goat Space: <span id="goatSpace">0</span>
+		</div>
+		
+		<div id="items" class="itemMenu">
+		</div>
+		
+		<div id="options" class="leftMenu">
+		</div>
+		
+		<div id="ascend" class="leftMenu">
+			<div>Goat Souls: <span id="goatSouls">0</span></div></br>
+			<div id="ascendButton" onclick="ascend()">Click to ascend.</div></br>
+			<div id="ascendDesc">Ascending will reset your game and give you goat souls in return. You can spend goat souls once you ascend to permanently unlock units, upgrades, skills and other useful things.</div>
+		</div>
+		
+		<div id="questTabs">
+			<div id="spaceTab" class="questTab" onclick="showSpace()">Space</div>
+			<div id="heroTab" class="questTab" onclick="showHeroic()">Heroic</div>
+		</div>
+		
+		<div id="spaceQuest" class="quest">
+			<div class="questButton" onclick="startSpaceQuest()">Start Space Quest!</div>
+			<div> <progress id="spaceQuestBar" class="progressBar" value="0" max = "2000"></progress><span id="spaceProgress" class="progress">0%</span> </div>
+			<div class="questDesc">Search through space with your rockets!</div>
+		</div>
+		
+		<div id="heroicQuest", class="quest">
+			<div class="questButton" onclick="startQuest();">Start Goat Quest!</div>
+			<div> <progress id="questBar" class="progressBar" value="0" max = "200"></progress><span id="progress" class="progress">0%</span> </div>
+			<div class="questDesc">Go on a quest with your amazing goat heroes!</div>
+			<div class="questReward">Reward from last quest: <span id="heroicQuestReward">-</span></div>
+		</div>
+		
+		<div id="battle">
+			<div id="battleButtons">
+				<div id="autoBattleButton" class="battleButton" onclick ="autoBattle()">Auto Battle</div>
+				<div id="autoAdvanceButton" class="battleButton" onclick ="autoAdvance()">Auto Advance</div>
+				<div class="battleButton" onclick ="battle()">Fight</div>
+				<div class="battleButton" onclick ="backLevel()">Back One Zone</div>
+				<div class="battleButton" onclick ="advanceLevel()">Advance One Zone</div>
+			</div>
+			
+			<div id="armyStats">
+				<div class="battleItem">Army Defense: <span id="armyDefense">0</span> </div>
+				<div class="battleItem">Army Strength: <span id="armyStrength">0</span></div>
+				<div class="battleItem">Army Health: <span id="armyHealth">0</span></div>
+			</div>
+			
+			<div id="enemyStats">
+				<div id="enemyName" class="enemyBattleItem">Enemy Level 1</div>
+				<div class="enemyBattleItem">Enemy Defense: <span id="enemyDefense">0</span> </div>
+				<div class="enemyBattleItem">Enemy Strength: <span id="enemyStrength">0</span></div>
+				<div class="enemyBattleItem">Enemy Health: <span id="enemyHp">0</span></div>
+			</div>
+			
+			<div id="recharge"></div><div id="rechargeOverlay"></div>
+			<div id="playerHealth"></div> <div id="playerOverlay"></div>
+			<div id="enemyHealth"></div> <div id="enemyOverlay"></div>
+			<div id="rewards">Reward from last fight: <span id="battleRewards">-</span></div>
+			<div id="skills"></div>
+		</div>
+		
+		<div id="tabs">
+			<div id="purchaseTab" class="tab" onclick="showPurchase()">Purchase</div>
+			<div id="upgradeTab" class="tab" onclick="showUpgrades()">Upgrades</div>
+			<div id="upgradeTab" class="tab" onclick="showGod()">God</div>
+		</div>
+		
+		<div id="purchase" class="rightMenu">
+			<div id="currency" class="generateButton" onclick="generateClick()">Click for money!</div>
+			<div id="availablePurchase"></div>
+			<div id="nextPurchase"></div>
+		</div>
+		
+		<div id="upgrades" class="rightMenu">
+			<input id="showUpgrades" type="checkbox" onclick="showPurchasedUpgrades()">Show Purchased Upgrades</input>
+			<div id="availableUpgrades"></div>
+			<div id="nextUpgrades"></div>
+			<div id="purchasedUpgrades"></div>
+		</div>
+		
+		<div id="god"></div>
+			<div id="goatseidon" class="rightMenu">
+				&nbsp;GOD: <span id="godName1"></span><br/>
+				&nbsp;Favor:<br/>
+				&nbsp;Per Second:<br/>
+				<div id="boon1">Test</div>
+				<div id="boon2">Rest</div>
+			</div>
+		
+			<div id="gometer" class="rightMenu">
+				&nbsp;GOD: <span id="godName2"></span><br/>
+				&nbsp;Favor:<br/>
+				&nbsp;Per Second:<br/>
+				<div id="boon1">Fast</div>
+			</div>
+			
+			<div id="gopollo" class="rightMenu">
+				&nbsp;GOD: <span id="godName3"></span><br/>
+				&nbsp;Favor: <span id="favor">0</span><br/>
+				&nbsp;Per Second: <span id="favorInc">0</span><br/>
+				<div id="boon1" class="favorButton" onclick="praiseIt();">
+					Praise It<br/>
+					<div class="description">Increases your favor with Gopollo by 1.</div>
+				</div>
+				<div id="boon2" class="purchaseButton" onclick="buySunGoat();">
+					<div class="objName">Sun Goat</div>
+					<div class="count"><span id="sunGoats">0</span></div><br/>
+					<div class="price"><span id="sunGoatCost">1 Goat Hero, 10 favor</span></div><br/>
+					<div class="description">Provides 1 money/s and 1 favor/s.</div>
+					<div class="description">You currently have <span id="sunGoatCostOneShow">0</span> Goat Hero(es).</div>
+				</div>
+				
+				<div class="purchaseButton" onclick="buyBlessing()">
+					<div class="objName">Blessing</div><br/>
+					<progress id="blessingBar" class="buffBar" value="0" max="30"></progress>
+					<div class="price">1000 favor</div><br/>
+					<div class="description">Provides 2x money for 30s.</div>
+				</div>
+				
+				<div id="soothyUnlock" class="purchaseButton" onclick="unlockSoothyGoat()">
+					<div class="objName">Unlock Soothy Goats</div><br/>
+					<div class="price">10000 favor</span></div><br/>
+					<div class="description">Gives you the ability to purchase Soothy Goats even after ascending.</div>
+				</div>
+			</div>
+			
+		<div id="footer">
+			<div id="saveButton" class="footerDiv" onclick="save();">Save</div>
+			<div id="loadButton" class="footerDiv" onclick="load();">Load</div>
+			<div id="autoSaveIndicator" >Auto Saved</div>
+			<div id="deleteSaveButton" class="footerDiv" onclick="deleteSave();">Delete Save</div>
+		</div>
+		
+	</body>
 </html>
